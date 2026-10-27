@@ -1,7 +1,8 @@
 """Banco Meridional branch queue manager.
 
 Each service type has its own FIFO queue, so an agent can call their next
-client without scanning clients waiting for other services.
+client without scanning clients waiting for other services. See DESIGN.md
+for why the queues are structured this way and how concurrent calls are handled.
 """
 
 from collections import deque
